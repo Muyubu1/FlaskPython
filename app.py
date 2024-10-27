@@ -7,6 +7,10 @@ def home():
     stuff="<h1>Hello, World!</h1>"
     return render_template("index.html", stuff=stuff)
 
+@app.route("/index") 
+def index():
+    return render_template("index.html")
+
 @app.route("/user/<name>")
 def user(name):
     return render_template(f"user.html", username=name)

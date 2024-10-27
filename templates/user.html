@@ -1,8 +1,11 @@
 <!-- <h1>Hello, {{ username }}!</h1> -->
+{%extends "base.html"%}
+{%block content%}
 
-{% if username == "john" %}
-    <h1>Welcome back, John!</h1>
+{% if username == "yusuf" %}
+    <h1>Welcome back, Yusuf!</h1>
 {% else %}
     <h1>Hello, Stranger!</h1>
 {% endif %}
+{%endblock%}
 
