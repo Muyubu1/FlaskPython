@@ -1,7 +1,15 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h1>merhbaa</h1>
-    <p>bu ilk denem</p>
-    <p>{{stuff |safe}}</p>
+  <h1>What's your name?</h1>
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(class="form-control") }}
+    <br>
+    {{ form.submit(class="btn btn-secondary") }}
+  </form>
+
+  {% if name %}
+    <h2>Hello, {{ name }}!</h2>
+  {% endif %}
 {% endblock %}
